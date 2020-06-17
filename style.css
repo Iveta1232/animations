@@ -4,10 +4,39 @@ body {
 
 
 .middle {
-  width: 1440px;
-  height: 400px;
+  width: 440px;
+  height: 200px;
   background-color: red;
+  transition: height 2s, width 6s,
+   background-color 4s;
 }
+
+.middle:hover {
+height: 400px;
+width: 1400px;
+background-color: yellow;
+}
+
+
+@keyframes example {
+  0%   {background-color:red; margin-left:0px; margin-top:0px;}
+  25%  {background-color:yellow; margin-left:200px; margin-top:0px;}
+  50%  {background-color:blue; margin-left:200px; margin-top:200px;}
+    60%  {background-color:white;}
+  75%  {background-color:green; margin-left:0px; margin-top:200px;}
+  100% {background-color:red; margin-left:0px; margin-top:0px;}
+}
+
+#animated{
+  width: 60px;
+  height: 60px;
+  background-color: blue;
+  animation-name: example;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+}
+
+
 
 @media screen and (max-width: 768px) {
   .middle {
